@@ -21,40 +21,57 @@ label {
 
 .training {
 	display: block;
-	margin: auto;
 	width: auto;
     padding: 1rem 3rem;
     cursor: pointer;
     transition: background-color 0.6s ease-out, color 0.6s ease-out;
     text-align: center;
-    color: #fff;
+    color: #6c3737;
     border: 2px solid transparent;
     border-radius: 3px;
     background-color: #055372;
     box-shadow: none;
     font-size: 2rem;
-    line-height: 1.15;
+    line-height: 10px;
     -webkit-appearance: none;
 	}
+#calendar {
+	height: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	margin-top: 1%;
+	font-size: 10pt;
+}
+.event_filter {
+	background: transparent;
+	color: black;
+	border-radius: 0;
+}
+label {
+	background: transparent;
+
+}
 </style>
-<p>
-    <label for="school_selector">Trainings filter:</label><select class="event_filter" id="school_selector">
-                                                                      <option value="0">All</option>
-                                                                      <option value="5">MHPSS trainings</option>
-                                                                      <option value="2">Advocacy trainings</option>
-                                                                      <option value="3">CFS trainings</option>
-                                                                      <option value="4">Emergency trainings</option>
-                                                                      <option value="1">Case management trainings</option>
-                                                                    </select>
-</p>
-<div>
-    <label for="participation_selector">Target group:</label><select class="event_filter" id="participation_selector">
+
+<div style="margin-top: 2%; font-size: 10pt; margin-left: 20%; margin-right: 20%;">
+	<p>Certainly! Welcome to the Child Protection AoR Training Calendar! Our commitment to safeguarding children in Ukraine extends beyond mere coordination. With approximately 250 partner organizations, our calendar caters to diverse roles—whether you’re a frontline responder, community worker, or advocate. Choose sessions that align with your responsibilities. Use our filters to refine your search: select sessions relevant to your work (children, caregivers, etc.) and find what suits your needs, from capacity-building workshops to specialized technical sessions. By participating in our trainings, you gain knowledge enhancement, networking opportunities, skills development, and resource sharing. Stay informed, collaborate, and advocate for essential resources. Share your learnings, connect with fellow child protection actors, and strengthen the safety net for vulnerable children. Join us on this journey toward a safer, more resilient Ukraine. Explore the calendar, sign up for sessions, and let’s make a difference! 🌟 Feel free to use this narrative on your web page, and don’t hesitate to reach out if you need further assistance! 😊</p>
+    <label for="participation_selector">Target group:</label><select class="event_filter" id="participation_selector" style="width: 10%;">
                       <option value="0">All</option>
                       <option value="1">Staff members within the organization</option>
                       <option value="2">Staff members from partner organizations</option>
                       <option value="3">Staff members from other organizations, CP AoR partners organizations</option>
                       <option value="4">Government officials and local authorities</option>
-                    </select>
+</select>
+<br>
+<label for="school_selector">Trainings filter:</label><select class="event_filter" id="school_selector" style="width: 10%; margin-top: 0.5%;">
+					<option value="0">All</option>
+					<option value="5">MHPSS trainings</option>
+					<option value="2">Advocacy trainings</option>
+					<option value="3">CFS trainings</option>
+					<option value="4">Emergency trainings</option>
+					<option value="1">Case management trainings</option>
+</select>
 </div>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.11/index.global.min.js"></script><script>
@@ -173,9 +190,8 @@ const myPopup = new Popup({
 			  });				
 			});
     </script>
+
 <div id="calendar">
-</div>
-<p></p>
-<div class="vertical-center">
-    <button class="training" align="center" onclick=" window.open(&apos;https://ee-eu.kobotoolbox.org/x/LDozOY9J&apos;,&apos;_blank&apos;)"> Add new training</button>
+	
+<button class="training" align="center" onclick=" window.open(&apos;https://ee-eu.kobotoolbox.org/x/LDozOY9J&apos;,&apos;_blank&apos;)" style="width: fit-content; margin-left: auto; margin-right: auto; margin-top: 1%; margin-bottom: 2%; color:white; background-color: #DFE569; font-size: 14pt;"> Add new training</button>
 </div>
